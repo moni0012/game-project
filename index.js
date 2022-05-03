@@ -30,6 +30,7 @@ colors = generateRandomColors(6)
 const squares = document.querySelectorAll(".square")
 const colorDisplay = document.getElementById("colorDisplay")
 const title = document.querySelector("h1")
+const resetButton = document.getElementById("resetButton")
 
 // choose winning color
 let pickedColor = colors[0];
@@ -37,14 +38,24 @@ let pickedColor = colors[0];
 // update the display color
 colorDisplay.textContent = pickedColor;
 
+resetButton.addEventListener("click", () => {
+    colors = generateRandomColors(6)
+    pickedColor = pickColor()
+    colorDisplay.textContent = pickedColor;
+    title.backgroundColor = 'black'
+    for (let i = 0; i < colors.length; i++) {
+        squares[i].style.backgroundColor = colors[i]
+    }
+})
+
 // set the colors of the squares
 for (let i = 0; i < squares.length; i++) {
     squares[i].style.backgroundColor = colors[i];
 
     // add click listeners
-    squares[i].addEventListener("click", function () {
+    squares[i].addEventListener("click", () => {
         // get the color of the clicked square
-        const clickedColor = this.style.backgroundColor;
+        const clickedColor = squares[i].style.backgroundColor;
         console.log(clickedColor);
         // compare that color to the pickedColor
         if (clickedColor === pickedColor) {
@@ -52,7 +63,7 @@ for (let i = 0; i < squares.length; i++) {
             changeColors(pickedColor)
             title.style.backgroundColor = pickedColor
         } else {
-            this.style.backgroundColor = "black"
+            squares[i].style.backgroundColor = "black"
             message.textContent = "you lost"
         }
     })
