@@ -31,6 +31,8 @@ const squares = document.querySelectorAll(".square")
 const colorDisplay = document.getElementById("colorDisplay")
 const title = document.querySelector("h1")
 const resetButton = document.getElementById("resetButton")
+const easyButton = document.getAnimations("easyButton")
+const hardButton = document.getElementById("hardButton")
 
 // choose winning color
 let pickedColor = colors[0];

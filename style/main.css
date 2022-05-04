@@ -67,9 +67,10 @@ button:hover {
 }
 
 #container {
+  padding-top: 40px;
   margin: 0 auto;
-  max-width: 600px;
-  min-height: 600px;
+  max-width: 390px;
+  min-height: 390px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
