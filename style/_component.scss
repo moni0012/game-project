@@ -11,6 +11,10 @@
     border-radius: 15%;
 }
 
+.selected {
+    background-color: $color-selected;
+}
+
 h1 {
     text-align: center;
     line-height: 1.1;

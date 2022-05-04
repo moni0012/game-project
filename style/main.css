@@ -21,6 +21,10 @@ body {
   border-radius: 15%;
 }
 
+.selected {
+  background-color: rgb(41, 85, 120);
+}
+
 h1 {
   text-align: center;
   line-height: 1.1;
