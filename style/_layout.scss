@@ -1,0 +1,17 @@
+@use "_base.scss"as *;
+
+#colorDisplay {
+    font-size: 200%;
+}
+
+#stripe {
+    background: white;
+    height: 30px;
+    text-align: center;
+    color: black;
+}
+
+#container {
+    margin: 0 auto;
+    max-width: 600px;
+}

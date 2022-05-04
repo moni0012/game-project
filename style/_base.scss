@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap");
+
+$font-body:"Robot",
+sans-serif;
+$font-diaplay: "Dancing script",
+serif;
+
+
+
+* {
+    margin: 0;
+    padding: 20px;
+}
+
+$color-black: black;
+$color-white: rgba(255, 255, 255, 0.993);
+$color-square : rgb(69, 16, 69);
+$color-selected : rgb(41, 85, 120);
