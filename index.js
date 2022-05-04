@@ -72,8 +72,12 @@ hardButton.addEventListener("click", () => {
     pickedColor = pickColor()
     colorDisplay.textContent = pickedColor
     for (let i = 0; i < squares.length; i++) {
-        squares[i].style.backgroundColor = colors[i]
-        squares[i].style.display = "block"
+        if (colors[i]) {
+            squares[i].style.backgroundColor = colors[i]
+            squares[i].style.display = "block"
+        } else {
+            squares[i].style.display = "none"
+        }
     }
 })
 
