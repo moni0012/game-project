@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap");
 * {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: black;
   margin: 0;
-  padding: 20px;
+  font-family: "Montserrat", "Avenir";
 }
 
 #message {
@@ -10,15 +16,9 @@
 }
 
 .square {
-  width: 30%;
-  background: purple;
-  padding-bottom: 30%;
-  float: left;
+  background: rgb(69, 16, 69);
   margin: 1.66%;
   border-radius: 15%;
-  transition: background 0.6s;
-  -webkit-transition: background 0.6s;
-  -moz-transition: background 0.6s;
 }
 
 h1 {
@@ -29,8 +29,29 @@ h1 {
   background: rgb(41, 85, 120);
   margin: 0;
   text-transform: uppercase;
+  width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+button {
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  height: 100%;
+  font-weight: 700;
+  color: rgb(41, 85, 120);
+  letter-spacing: 1px;
+  font-size: inherit;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  outline: none;
+}
+
+button:hover {
+  color: white;
+  background: rgb(41, 85, 120);
 }
 
 #colorDisplay {
@@ -38,8 +59,9 @@ h1 {
 }
 
 #stripe {
-  background: white;
+  background: rgba(255, 255, 255, 0.993);
   height: 30px;
+  width: 100%;
   text-align: center;
   color: black;
 }
@@ -47,4 +69,8 @@ h1 {
 #container {
   margin: 0 auto;
   max-width: 600px;
+  min-height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }/*# sourceMappingURL=main.css.map */

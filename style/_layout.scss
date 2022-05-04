@@ -5,8 +5,9 @@
 }
 
 #stripe {
-    background: white;
+    background: $color-white;
     height: 30px;
+    width: 100%;
     text-align: center;
     color: black;
 }
@@ -14,4 +15,8 @@
 #container {
     margin: 0 auto;
     max-width: 600px;
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }
