@@ -39,7 +39,6 @@ const hardButton = document.getElementById("hardButton")
 const superHardButton = document.getElementById("superHardButton")
 
 // choose winning color
-// let colors = generateRandomColors(numSquares)
 let pickedColor = colors[0];
 
 // update the display color
@@ -54,7 +53,6 @@ easyButton.addEventListener("click", () => {
     colors = generateRandomColors(numSquares)
     pickedColor = pickColor()
     colorDisplay.textContent = pickedColor
-    console.log(squares)
     for (let i = 0; i < squares.length; i++) {
         if (colors[i]) {
             squares[i].style.backgroundColor = colors[i]
@@ -71,10 +69,8 @@ hardButton.addEventListener("click", () => {
     superHardButton.classList.remove("selected")
     numSquares = 6;
     colors = generateRandomColors(numSquares)
-    console.log(colors)
     pickedColor = pickColor()
     colorDisplay.textContent = pickedColor
-    console.log(squares)
     for (let i = 0; i < squares.length; i++) {
         squares[i].style.backgroundColor = colors[i]
         squares[i].style.display = "block"
@@ -90,7 +86,6 @@ superHardButton.addEventListener("click", () => {
     colors = generateRandomColors(numSquares)
     pickedColor = pickColor()
     colorDisplay.textContent = pickedColor
-    console.log(squares)
     for (let i = 0; i < squares.length; i++) {
         squares[i].style.backgroundColor = colors[i]
         squares[i].style.display = "block"
