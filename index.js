@@ -70,19 +70,14 @@ hardButton.addEventListener("click", () => {
     easyButton.classList.remove("selected")
     superHardButton.classList.remove("selected")
     numSquares = 6;
-    let hardColours = generateRandomColors(numSquares)
+    colors = generateRandomColors(numSquares)
     console.log(colors)
     pickedColor = pickColor()
     colorDisplay.textContent = pickedColor
     console.log(squares)
     for (let i = 0; i < squares.length; i++) {
-        // squares[i].style.backgroundColor = colors[i]
-        // squares[i].style.display = "block"
-        if (hardColours[i]) {
-            squares[i].style.backgroundColor = hardColours[i]
-        } else {
-            squares[i].style.display = "none"
-        }
+        squares[i].style.backgroundColor = colors[i]
+        squares[i].style.display = "block"
     }
 })
 
